@@ -154,7 +154,7 @@ def setup(
         # 2 sub-buffers of 8 times the usual page size
         # We use 2 sub-buffers because the number of sub-buffers is pointless in discard mode,
         # and switching between sub-buffers introduces noticeable CPU overhead
-        channel_ust.attr.subbuf_size = 8 * 4096
+        channel_ust.attr.subbuf_size = 32 * 8 * 4096
         channel_ust.attr.num_subbuf = 2
         # Ignore switch timer interval and use read timer instead
         channel_ust.attr.switch_timer_interval = 0
